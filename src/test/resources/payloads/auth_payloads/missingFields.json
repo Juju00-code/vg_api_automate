@@ -1,0 +1,8 @@
+{
+  "missingUsernameField":{
+    "password": "admin"
+  },
+  "missingPasswordField":{
+    "username": "admin"
+  }
+}

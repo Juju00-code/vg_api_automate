@@ -1,0 +1,74 @@
+{
+  "ivdtReleaseDateFormat":{
+    "name": "Test Game",
+    "releaseDate": "mmmmmmm",
+    "reviewScore": 91,
+    "category": "Driving",
+    "rating": "Universal"
+  },
+  "ivdtReviewScoreAboveMax":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": 110,
+    "category": "Driving",
+    "rating": "Universal"
+  },
+
+  "ivdtReviewScoreNegInt":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": -70,
+    "category": "Driving",
+    "rating": "Universal"
+  },
+
+  "ivdtCategoryEnum":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": 85,
+    "category": "asdfsdf",
+    "rating": "Universal"
+  },
+  "ivdtRatingEnum":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": 85,
+    "category": "Driving",
+    "rating": "Tight"
+  },
+  "ivdtNameInt":{
+    "name": 2334,
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": 85,
+    "category": "Driving",
+    "rating": "Universal"
+  },
+  "ivdtReleaseDateBool":{
+    "name": "Test Game 3",
+    "releaseDate": true,
+    "reviewScore": 91,
+    "category": "Driving",
+    "rating": "Universal"
+  },
+  "ivdtReviewScoreString":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": "Test",
+    "category": "Driving",
+    "rating": "Universal"
+  },
+  "ivdtCatergoryInt":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": 91,
+    "category": 88,
+    "rating": "Universal"
+  },
+  "ivdtRatingBool":{
+    "name": "Test Game 3",
+    "releaseDate": "2001-03-10 23:59:5",
+    "reviewScore": 91,
+    "category": "Driving",
+    "rating": false
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "updateToIvdtNamebool":{
+    "name": true,
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": 98,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtNameInt":{
+    "name": 1223,
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": 98,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtReleaseDateBool":{
+    "name": "Grand Tourist 3",
+    "releaseDate": true,
+    "reviewScore": 98,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtReleaseDateFormat":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "wwwwssddd",
+    "reviewScore": 98,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtReviewScoreBool":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": false,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtReviewScoreString":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": "xsdfd",
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtReviewScoreAboveMax":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": 120,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtReviewScoreStringBelowMin":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": -90,
+    "category": "Shooting",
+    "rating": "PG-13"
+  },
+  "updateToIvdtCategoryInt":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": 98,
+    "category": 1001,
+    "rating": "PG-13"
+  },
+  "updateToIvdtCategoryBool": {
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": "100",
+    "category": false,
+    "rating": "PG-13"
+  },
+  "updateToIvdtCategoryEnum":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": "100",
+    "category": "Not Enum",
+    "rating": "PG-13"
+  },
+  "updateToIvdtRatingInt":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": "100",
+    "category": "Shooting",
+    "rating": 1100
+  },
+  "updateToIvdtRatingBool":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": "100",
+    "category": "Shooting",
+    "rating": true
+  },
+  "updateToIvdtRatingEnum":{
+    "name": "Grand Tourist 3",
+    "releaseDate": "2004-05-10 23:59:59",
+    "reviewScore": "100",
+    "category": "Shooting",
+    "rating": "Not Enum"
+  }
+}

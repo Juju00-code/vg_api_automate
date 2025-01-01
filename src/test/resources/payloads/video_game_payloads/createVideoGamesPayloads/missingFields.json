@@ -1,0 +1,32 @@
+{
+  "missingNameField": {
+    "releaseDate": "2005-10-01 23:59:59",
+    "reviewScore": 85,
+    "category": "Shooter",
+    "rating": "Universal"
+  },
+  "missingReleaseDateField": {
+    "name": "Test Game 2",
+    "reviewScore": 85,
+    "category": "Shooter",
+    "rating": "Universal"
+  },
+  "missingReviewScoreField": {
+    "name": "Test Game 2",
+    "releaseDate": "2005-10-01 23:59:59",
+    "category": "Shooter",
+    "rating": "Universal"
+  },
+  "missingCategoryField": {
+    "name": "Test Game 2",
+    "releaseDate": "2005-10-01 23:59:59",
+    "reviewScore": 85,
+    "rating": "Universal"
+  },
+  "missingRatingField": {
+    "name": "Test Game 2",
+    "releaseDate": "2005-10-01 23:59:59",
+    "reviewScore": 85,
+    "category": "Shooter"
+  }
+}

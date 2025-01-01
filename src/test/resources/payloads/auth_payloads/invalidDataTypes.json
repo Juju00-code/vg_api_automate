@@ -1,0 +1,18 @@
+{
+  "invalidDataTypeUsernameBool":{
+    "password":"admin",
+    "username": true
+  },
+  "invalidDataTypeUsernameInt":{
+    "password":"admin",
+    "username": 10023
+  },
+  "invalidDataTypePasswordBool":{
+    "password": true,
+    "username": "admin"
+  },
+  "invalidDataTypePasswordInt":{
+    "password": 1000,
+    "username": "admin"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "missingNameField": {
+    "releaseDate": "2003-03-10 23:59:59",
+    "reviewScore": 90,
+    "category": "Driving",
+    "rating": "Matured"
+  },
+  "missingReleaseDateField": {
+    "name": "Gran Turismoo 3",
+    "reviewScore": 90,
+    "category": "Driving",
+    "rating": "Matured"
+  },
+  "missingReviewScoreField": {
+    "name": "Gran Turismoo 3",
+    "releaseDate": "2003-03-10 23:59:59",
+    "category": "Driving",
+    "rating": "Matured"
+  },
+  "missingCategoryField": {
+    "name": "Gran Turismoo 3",
+    "releaseDate": "2003-03-10 23:59:59",
+    "reviewScore": 90,
+    "rating": "Matured"
+  },
+  "missingrRatingField": {
+    "name": "Gran Turismoo 3",
+    "releaseDate": "2003-03-10 23:59:59",
+    "reviewScore": 90,
+    "category": "Driving"
+  }
+}
