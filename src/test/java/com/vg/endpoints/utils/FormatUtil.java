@@ -33,27 +33,28 @@ public class FormatUtil {
         System.out.println(data.get("ivdtNameInt"));
     }*/
 
-    public String getAuthToken(Response authResponse){
+    public static String getAuthToken(Response authResponse){
         String authResponseToken = authResponse.getBody().asString();
         String[] getToken = authResponseToken.split(":");
         String token = getToken[1].trim().replace("\"","").replace("}","");
         return token;
     }
 
-    public JSONObject getJSONPayload(String jsonFileLocation) throws FileNotFoundException {
+    public static JSONObject getJSONPayload(String jsonFileLocation, String jsonField) throws FileNotFoundException {
         File file = new File(jsonFileLocation);
         FileReader readFile = new FileReader(file);
         JSONTokener tokenize = new JSONTokener(readFile);
         JSONObject data = new JSONObject(tokenize);
-        return data;
+        JSONObject payload = (JSONObject) data.get(jsonField);
+        return payload;
     }
 
-    public String getUrl(String routeLocation,String route){
+    public static String getUrl(String routeLocation,String route){
         ResourceBundle segmentRoute = ResourceBundle.getBundle(routeLocation)  ;
         return segmentRoute.getString(route);
     }
 
-    public int[] listTest(int listLength){
+    public static int[] listTest(int listLength){
         int counter = 5;
         int[] listIndex = new int[5];
         for (int i=0; i < counter; i++){
@@ -64,7 +65,7 @@ public class FormatUtil {
         return listIndex;
     }
 
-    public boolean validateResponseWithSchema(String responseData, String schemaPath) throws IOException, ProcessingException {
+    public static boolean validateResponseWithSchema(String responseData, String schemaPath) throws IOException, ProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode resNode = mapper.readTree(responseData);
         JsonNode schemaNode = mapper.readTree(new File(schemaPath));
@@ -74,7 +75,7 @@ public class FormatUtil {
         return report.isSuccess();
     }
 
-    public boolean validateGameListSchema(List<Map<String,Object>>games,String schemaFilePath) throws IOException, ProcessingException {
+    public static boolean validateGameListSchema(List<Map<String,Object>>games,String schemaFilePath) throws IOException, ProcessingException {
         for(Map<String,Object>game:games){
             ObjectMapper mapper = new ObjectMapper();
             String gameJson = mapper.writeValueAsString(game);
@@ -90,7 +91,7 @@ public class FormatUtil {
         return true;
     }
 
-    public LocalDate standardizeDate(String responseDate){
+    public static LocalDate standardizeDate(String responseDate){
         ZonedDateTime dateTime = ZonedDateTime.parse(responseDate, DateTimeFormatter.RFC_1123_DATE_TIME);
         LocalDate headerDate = dateTime.toLocalDate();
         return headerDate;
