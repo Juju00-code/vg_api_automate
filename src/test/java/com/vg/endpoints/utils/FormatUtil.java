@@ -20,18 +20,12 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
 public class FormatUtil {
-    /*public void checkJsonFormat() throws FileNotFoundException {
-        File file = new File("src\\test\\resources\\payloads\\video_game_payloads\\createVideoGamesPayloads\\invalidDataType.json");
-        FileReader readFile = new FileReader(file);
-        JSONTokener tokenize = new JSONTokener(readFile);
-        JSONObject data  = new JSONObject(tokenize);
-        System.out.println(data.get("ivdtNameInt"));
-    }*/
 
     public static String getAuthToken(Response authResponse){
         String authResponseToken = authResponse.getBody().asString();
@@ -50,11 +44,11 @@ public class FormatUtil {
     }
 
     public static String getUrl(String routeLocation,String route){
-        ResourceBundle segmentRoute = ResourceBundle.getBundle(routeLocation)  ;
+        ResourceBundle segmentRoute = ResourceBundle.getBundle(routeLocation);
         return segmentRoute.getString(route);
     }
 
-    public static int[] listTest(int listLength){
+    private static int[] listTest(int listLength){
         int counter = 5;
         int[] listIndex = new int[5];
         for (int i=0; i < counter; i++){
@@ -63,6 +57,15 @@ public class FormatUtil {
         }
 
         return listIndex;
+    }
+
+    public static List<Map<String,Object>> selectedGameList(List<Map<String,Object>>gameList){
+        int[] placeOfSelection = listTest(gameList.size());
+        List<Map<String,Object>> listSample = new ArrayList<>();
+        for(int i=0; i<placeOfSelection.length; i++){
+            listSample.add(gameList.get(i));
+        }
+        return listSample;
     }
 
     public static boolean validateResponseWithSchema(String responseData, String schemaPath) throws IOException, ProcessingException {
