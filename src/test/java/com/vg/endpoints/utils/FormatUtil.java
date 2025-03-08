@@ -20,18 +20,9 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class FormatUtil {
-    /*public void checkJsonFormat() throws FileNotFoundException {
-        File file = new File("src\\test\\resources\\payloads\\video_game_payloads\\createVideoGamesPayloads\\invalidDataType.json");
-        FileReader readFile = new FileReader(file);
-        JSONTokener tokenize = new JSONTokener(readFile);
-        JSONObject data  = new JSONObject(tokenize);
-        System.out.println(data.get("ivdtNameInt"));
-    }*/
 
     public static String getAuthToken(Response authResponse){
         String authResponseToken = authResponse.getBody().asString();
@@ -50,19 +41,58 @@ public class FormatUtil {
     }
 
     public static String getUrl(String routeLocation,String route){
-        ResourceBundle segmentRoute = ResourceBundle.getBundle(routeLocation)  ;
+        ResourceBundle segmentRoute = ResourceBundle.getBundle(routeLocation);
         return segmentRoute.getString(route);
     }
 
-    public static int[] listTest(int listLength){
+    /*private static int[] listTest(int listLength){
         int counter = 5;
         int[] listIndex = new int[5];
         for (int i=0; i < counter; i++){
             int randomListIndex = (int)(Math.random() * listLength);
+            for(int j=0; j<i; j++){
+                if(listIndex[j] === randomListIndex){
+                    break;
+                }
+            }
             listIndex[i] = randomListIndex;
         }
 
         return listIndex;
+    }*/
+
+    private static int[] listTest(int listLength) {
+        int counter = 5;
+        int[] listIndex = new int[counter];
+        for (int i = 0; i < counter; i++) {
+            int randomListIndex;
+            boolean exists;
+
+            do {
+                randomListIndex = (int) (Math.random() * listLength);
+                exists = false;
+                for (int j = 0; j < i; j++) {
+                    if (listIndex[j] == randomListIndex) {
+                        exists = true;
+                        break;
+                    }
+                }
+            } while (exists);
+
+            listIndex[i] = randomListIndex;
+        }
+
+        return listIndex;
+    }
+
+    public static List<Map<String,Object>> selectedGameList(List<Map<String,Object>>gameList){
+        int[] placeOfSelection = listTest(gameList.size());
+        List<Map<String,Object>> listSample = new ArrayList<>();
+        for(int i=0; i<placeOfSelection.length; i++){
+            int gameItem = placeOfSelection[i];
+            listSample.add(gameList.get(gameItem));
+        }
+        return listSample;
     }
 
     public static boolean validateResponseWithSchema(String responseData, String schemaPath) throws IOException, ProcessingException {
