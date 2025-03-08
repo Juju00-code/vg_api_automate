@@ -50,6 +50,8 @@ public class VideoGameEndPoint {
     public static Response updateGame(String id, JSONObject payload,String token){
         String getUpdateGameUrl = FormatUtil.getUrl(VIDEOGAMESEGMENTROUTE,UPDATEGAME);
         Response res = given()
+                .headers("Authorization","Bearer "+ token)
+                .contentType(ContentType.JSON)
                 .pathParam("id",id)
                 .body(payload.toString())
                 .when()
@@ -58,11 +60,12 @@ public class VideoGameEndPoint {
     }
 
     public static Response deleteGame(String id,String token){
-        String getDeleteGameUrl = FormatUtil.getUrl(VIDEOGAMESEGMENTROUTE,VIEWGAME);
+        String getDeleteGameUrl = FormatUtil.getUrl(VIDEOGAMESEGMENTROUTE,DELETEGAME);
         Response res = given()
+                .headers("Authorization","Bearer " + token)
                 .pathParam("id",id)
                 .when()
-                .delete(DELETEGAME);
+                .delete(getDeleteGameUrl);
         return res;
     }
 

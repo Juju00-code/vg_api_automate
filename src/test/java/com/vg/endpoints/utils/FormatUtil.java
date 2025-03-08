@@ -20,10 +20,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class FormatUtil {
 
@@ -48,11 +45,40 @@ public class FormatUtil {
         return segmentRoute.getString(route);
     }
 
-    private static int[] listTest(int listLength){
+    /*private static int[] listTest(int listLength){
         int counter = 5;
         int[] listIndex = new int[5];
         for (int i=0; i < counter; i++){
             int randomListIndex = (int)(Math.random() * listLength);
+            for(int j=0; j<i; j++){
+                if(listIndex[j] === randomListIndex){
+                    break;
+                }
+            }
+            listIndex[i] = randomListIndex;
+        }
+
+        return listIndex;
+    }*/
+
+    private static int[] listTest(int listLength) {
+        int counter = 5;
+        int[] listIndex = new int[counter];
+        for (int i = 0; i < counter; i++) {
+            int randomListIndex;
+            boolean exists;
+
+            do {
+                randomListIndex = (int) (Math.random() * listLength);
+                exists = false;
+                for (int j = 0; j < i; j++) {
+                    if (listIndex[j] == randomListIndex) {
+                        exists = true;
+                        break;
+                    }
+                }
+            } while (exists);
+
             listIndex[i] = randomListIndex;
         }
 
@@ -63,7 +89,8 @@ public class FormatUtil {
         int[] placeOfSelection = listTest(gameList.size());
         List<Map<String,Object>> listSample = new ArrayList<>();
         for(int i=0; i<placeOfSelection.length; i++){
-            listSample.add(gameList.get(i));
+            int gameItem = placeOfSelection[i];
+            listSample.add(gameList.get(gameItem));
         }
         return listSample;
     }
