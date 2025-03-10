@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 public class AuthTest {
-    private static final String SCHEMA_AUTH = ".\\schemas\\authGameSchemas\\auth_schemas.json";
+    private static final String SCHEMA_AUTH = ".\\schemas\\authSchemas\\auth_schemas.json";
     private static final String CONTENT_TYPE = "application/json";
     private static final String SCHEMA_ERROR = ".\\schemas\\errorMessageSchemas.json";
     static SoftAssert softAssert = new SoftAssert();
